@@ -1,6 +1,6 @@
 # 🚀 Frontend - Portal Soyudecino.co
 
-Bienvenido al repositorio del **frontend** del proyecto **Guardian Udecino**.
+Bienvenido al repositorio del **frontend** del proyecto **APLICATIVO WEB PARA MEJORAR EL ACCESO Y CONTROL DE DISPOSITIVOS ELECTRÓNICOS EN LA UNIVERSIDAD DE CUNDINAMARCA EXTENSIÓN CHIA**.
 
 ---
 
