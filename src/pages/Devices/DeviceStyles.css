@@ -1,0 +1,333 @@
+/* deviceStyles.css */
+
+/* General  */
+.device-list-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    margin: 20px auto;
+    max-width: 1000px;
+  }
+  
+  /* Header  */
+  .device-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .header-actions button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .header-actions .MuiButton-containedPrimary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .header-actions .MuiButton-containedPrimary:hover {
+    background-color: #0056b3;
+  }
+  
+  .header-actions .MuiButton-containedSecondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .header-actions .MuiButton-containedSecondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .profile-banner {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 250px; /* Ajusta la altura según necesites */
+    overflow: hidden; /* Evita desbordamientos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+}
+
+  /* Table styles */
+  .device-list-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .device-list-table th {
+    background-color: #00482b;
+    color: white;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .device-list-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .device-list-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Status  */
+  .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .status.active {
+    background-color: #28a745;
+  }
+  
+  .status.inactive {
+    background-color: #dc3545;
+  }
+  
+  /* Action buttons */
+  .edit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .inactivate-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .inactivate-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Pagination controls */
+  .pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .pagination-controls button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .pagination-controls button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .pagination-controls span {
+    font-size: 14px;
+  }
+  .form-container {
+    width: 400px;
+    background-color: var(--institutional-font-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    border: 3px solid var(--institutional-green-dark);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .form-container h2 {
+    color: var(--institutional-green-dark);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-container .photo {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: var(--institutional-green-dark);
+    position: relative;
+    background-color: #f0f0f0; /* Fondo predeterminado */
+  }
+  
+  .form-container .photo input {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .form-container .photo:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .form-container .photo span {
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .form-container .input-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .form-container .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--institutional-green-dark);
+    text-align: left;
+  }
+  
+  .form-container .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--card-border-color);
+    border-radius: 5px;
+  }
+  
+/* Botones */
+/* Estilos para los botones */
+.form-container .buttons button {
+    border: none;
+    border-radius: 20px; /* Botones redondeados */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .form-container .buttons .save-button {
+    background-color: var(--institutional-green-light);
+    color: var(--institutional-font-color);
+  }
+  
+  .form-container .buttons .save-button:hover {
+    background-color: var(--institutional-green-dark);
+  }
+  
+  .form-container .buttons .cancel-button {
+    background-color: var(--menu-active-color);
+    color: var(--institutional-green-dark);
+  }
+  
+  .form-container .buttons .cancel-button:hover {
+    background-color: #ffe066; /* Hover más claro */
+  }
+  
+  .card-design {
+    background-color: var(--institutional-green-light);
+    color: var(--institutional-font-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: auto;
+  }
+  
+  .card-design .info {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .card-design .info span {
+    display: block;
+    font-size: 16px;
+  }
+  
+  .card-design .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-design .photo img {
+    border-radius: 50%;
+    border: 2px solid var(--institutional-font-color);
+    width: 80px;
+    height: 80px;
+  }
+  .status-button.activate {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .status-button.activate:hover {
+    background-color: #218838;
+  }
+  
+  .status-button.inactivate {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .status-button.inactivate:hover {
+    background-color: #c82333;
+  }
