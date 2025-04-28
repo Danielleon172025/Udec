@@ -19,8 +19,8 @@ Bienvenido al repositorio del **frontend** del proyecto **Guardian Udecino**.
 ## ⚙️ Instalación del proyecto
 
 ```bash
-git clone https://github.com/tuusuario/soyudecino-frontend.git
-cd soyudecino-frontend
+git clone https://github.com/Danielleon172025/Udec.git
+cd udec-frontend
 npm install
 
 npm start       # Ejecuta en desarrollo
