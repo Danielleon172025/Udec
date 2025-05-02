@@ -29,11 +29,13 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 
-// Configuración básica para permitir solicitudes desde diferentes locaciones
+// Configuración básica para permitir solicitudes desde diferentes locaciones,Por defecto URL, Si se requiere desde multiples
+//lugares añadir las correspondientes ip o en su defecto "*"
 app.use(cors({
-  origin: '*', // Origen permitido
-  methods: ['GET', 'POST', 'PUT','PATCH', 'DELETE'], // Métodos permitidos
-  credentials: true, // encabezados de autenticación
+  origin: ['https://soyudecino.co'], 
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
 
 
@@ -62,21 +64,13 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'"],
-      styleSrc: ["'self'"],
-    },
-  })
-);
-// Configuración básica para permitir solicitudes desde diferentes locaciones
-app.use(cors({
-  origin: 'soyudecino.com', // Origen permitido
-  methods: ['GET', 'POST', 'PUT','PATCH', 'DELETE'], // Métodos permitidos
-  credentials: true, //encabezados de autenticación
-}));
+
+// Configuración  para permitir solicitudes desde diferentes locaciones
+//app.use(cors({
+//  origin: 'soyudecino.com', // Origen permitido
+//  methods: ['GET', 'POST', 'PUT','PATCH', 'DELETE'], // Métodos permitidos
+//  credentials: true, //encabezados de autenticación
+//}));
 
 
 
@@ -105,7 +99,7 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
     return res.status(400).send({ message: 'No se envió ningún archivo' });
   }
 
-  // Solo la parte visible desde el frontend
+
   const filePath = `uploads/images/${req.file.filename}`;
 
   res.status(200).send({ filePath });
@@ -116,7 +110,7 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
 
 app.use('/uploads/images', express.static(path.join(__dirname, 'src/utils/uploads/images')));
 
-// Servir el frontend compilado (React)
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Para cualquier ruta que no sea de la API, redirigir archivo index.html del frontend
